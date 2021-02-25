@@ -1,15 +1,16 @@
 import discord
-from discord.ext import commands
+from discord.ext                            import commands
 client = discord.Client()
 
+#var import
+from var                                    import *
 #function imports
-from functions.general.hellobot import hellobot
+from functions.general.hellobot             import hellobot
+from functions.general.help                 import botHelp
+from functions.util.random                  import random
 
 @client.event
 async def on_ready() : #when ready
-    global prefix
-    prefix = "$"
-
     global botName
     botName = '{0.user}'.format(client)
     botName = botName[:-5]
@@ -24,17 +25,26 @@ async def on_message(message) : #fetch messages
     if message.author == client.user: #don't continue if made by bot
         return
 
-    #   //help by bot mention
-    # if (message.content === "<@!" + client.user.id + ">") {
-    #     help(client, message, embed);
-    #     return;
-    # }
-
+    #GENERAL
     if message.content == "<@!" + str(client.user.id) + ">": #help by bot mention
-        await message.channel.send("HELP")
+        await botHelp(botName, avatar, message)
+        return
 
-    if message.content.startswith(prefix + 'hellobot'):
+    if message.content == prefix + 'help': #help by command
+        await botHelp(botName, avatar, message)
+        return
+
+    if message.content == prefix + 'hellobot': #response test
         await hellobot(botName, avatar, message)
         return
 
-client.run('NzI2MDcyMDg4NTQ4NjA1OTYy.XvX9Uw._Zf9z_tFG5IsR1QN-v6kgwPyia4') #รันบอท (โดยนำ TOKEN จากบอทที่เราสร้างไว้นำมาวาง)
+    #UTILITY
+    if message.content.startswith(prefix + 'random') or message.content.startswith(prefix + 'r'): #random number
+        await random(botName, avatar, message, "normal")
+        return
+
+    if message.content.startswith(prefix + 'saucerand'): #random sauce
+        await random(botName, avatar, message, "sauce")
+        return
+
+client.run(TOKEN) #RUN

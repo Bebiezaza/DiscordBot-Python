@@ -5,6 +5,15 @@
 * = Changed, Tweaked, Fixed
 
 
+Alpha 2.0.0
+	+ ping-pong test
+	+ help by mention
+	+ random number generator
+	+ sauce random generator
+
+=== Start of Python Era ===
+
+=== End of JavaScript Era ===
 1.2.4_01 (Alpha)
 	* chat bulkdelete abuse prevention
 
