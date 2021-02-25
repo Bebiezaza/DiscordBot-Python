@@ -18,4 +18,4 @@ helpText = helpText +   "**" + prefix + "saucerand** = sauce randomization, resu
 
 @client.event
 async def botHelp(botName, avatar, message):
-    await embed(botName, avatar, message, helpText)
+    await embed(botName + " - " + version, avatar, message, helpText)

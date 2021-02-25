@@ -5,6 +5,9 @@
 * = Changed, Tweaked, Fixed
 
 
+Alpha 2.0.1
+	* random number generator now delete users' command
+	
 Alpha 2.0.0
 	+ ping-pong test
 	+ help by mention

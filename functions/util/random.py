@@ -39,3 +39,5 @@ async def random(botName, avatar, message, identity):
 
                 #print
                 await embed(botName, avatar, message, "__**Random:**__ " + minNum + " to " + maxNum + "\n**= " + rand + "**\n\nRequested by <@!" + str(message.author.id) + ">")
+    
+    await message.delete()

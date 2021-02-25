@@ -10,7 +10,7 @@ from functions.general.help                 import botHelp
 from functions.util.random                  import random
 
 @client.event
-async def on_ready() : #when ready
+async def on_ready(): #when ready
     global botName
     botName = '{0.user}'.format(client)
     botName = botName[:-5]
@@ -21,7 +21,7 @@ async def on_ready() : #when ready
     print('Logged in as {0.user}'.format(client)) #show in command shell
 
 @client.event
-async def on_message(message) : #fetch messages
+async def on_message(message): #fetch messages
     if message.author == client.user: #don't continue if made by bot
         return
 
@@ -46,5 +46,10 @@ async def on_message(message) : #fetch messages
     if message.content.startswith(prefix + 'saucerand'): #random sauce
         await random(botName, avatar, message, "sauce")
         return
+
+    #MUSIC
+    if message.content == prefix + 'join': #join vc
+        channel = message.author.voice.channel
+        await channel.connect()
 
 client.run(TOKEN) #RUN

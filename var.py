@@ -10,4 +10,4 @@ prefix = os.getenv('PREFIX')
 #END dotenv
 
 global version
-version = "Alpha 2.0.0"
+version = "Alpha 2.0.1"
