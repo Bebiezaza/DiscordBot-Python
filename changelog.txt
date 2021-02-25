@@ -1,0 +1,73 @@
+==== Change Log ====
+
++ = Added
+- = Removed
+* = Changed, Tweaked, Fixed
+
+
+1.2.4_01 (Alpha)
+	* chat bulkdelete abuse prevention
+
+1.2.4 (Alpha)
+	+ chat bulkdelete to a specific number of messages
+
+1.2.3_04 (Alpha)
+	* fixed unexpected crash if playing only one song
+
+1.2.3_03 (Alpha)
+	* changed removed songs from the queue from **~~deleted~~** to **~~removed~~**
+	
+1.2.3_02 (Alpha)
+	* fixed removing songs adjacent to each other causing crash
+
+1.2.3 (Alpha)
+	+ ability to remove song mid-queue
+
+1.2.2 (Alpha)
+	+ reset command, in case the bot decided to not play any song
+
+1.2.1 (Alpha)
+	* wrong RNG agrument notice bug fixed
+	* ping test is actually Discord's API ping, command changed accordingly
+
+1.2.0 (Alpha)
+	* index.js code rearrangement
+	* commands file separate into different category folder
+	
+1.1.4 (Alpha)
+	+ custom random number generator
+	
+1.1.3 (Alpha)
+	+ mentioning the bot now shows help
+
+1.1.2 (Alpha)
+	+ internet response (ping) test
+	+ sauce randomization, with guide from someone else
+	+ invalid command text reimplemented
+	* disconnecting message changed
+	* command list accounts for the new utilities by separating categories
+
+1.1.1 (Alpha)
+	+ queue list system
+	* remove some repetitive code
+	* group commands (code wise)
+
+1.1.0 (Alpha)
+	+ {prefix}help shows commands list
+	* modularize the code
+
+1.0.2 (Alpha)
+	+ now-playing command
+	* disconnect shows "Skipped!" bug fixed
+	- invalid command text removed for now (will add back later)
+
+1.0.1 (Alpha)
+	+ a notice message when the bot run out of songs and disconnects
+	* all messages are now embed messages
+
+1.0.0 (Alpha)
+	initial Working Version
+		+ play songs from youtube URL
+		+ skip
+		+ disconnect
+		+ special responsive test
